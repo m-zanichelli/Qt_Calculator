@@ -49,6 +49,8 @@ Calculator::Calculator(QWidget *parent)
             SLOT(CubeButtonPressed()));
     connect(ui->SquareRoot, SIGNAL(released()), this,
             SLOT(SqrtButtonPressed()));
+    connect(ui->RemoveLastChar,SIGNAL(released()),this,
+            SLOT(RemoveLastCharPressed()));
 }
 
 Calculator::~Calculator()
@@ -65,10 +67,19 @@ void Calculator::NumPressed(){
     }
     QString butVal = button->text();
     QString displayVal = ui->Display->text();
+    int len = displayVal.length();
+    QString lastVal = "";
+    if (len>=1) {
+        lastVal= displayVal[len-1];
+    }
     if (((displayVal.toDouble()==0)||((displayVal.toDouble()==0.0)))&&dotTrigger==false){
         ui->Display->setText(butVal);
     }
     else if (((displayVal.toDouble()==0)||((displayVal.toDouble()==0.0)))&&dotTrigger==true){
+        displayVal.append(butVal);
+        ui->Display->setText(displayVal);
+    }
+    else if (lastVal.toDouble()==0 && displayVal.toDouble()!=0){
         displayVal.append(butVal);
         ui->Display->setText(displayVal);
     }
@@ -192,4 +203,12 @@ void Calculator::SqrtButtonPressed(){
     double dblDisplayVal = displayVal.toDouble();
     double result = sqrt(dblDisplayVal);
     ui->Display->setText(QString::number(result));
+}
+void Calculator::RemoveLastCharPressed(){
+    QString displayVal = ui->Display->text();
+    double dbldisplayVal = displayVal.toDouble();
+    if (dbldisplayVal!=0){
+        displayVal.chop(1);
+        ui->Display->setText(displayVal);
+    }
 }

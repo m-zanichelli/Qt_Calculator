@@ -25,6 +25,7 @@ private slots:
     void ChangeNumberSign();
     void MemoryButtonPressed();
     void ClearButtonPressed();
+    void RemoveLastCharPressed();
     void DotButtonPressed();
     void SquareButtonPressed();
     void CubeButtonPressed();

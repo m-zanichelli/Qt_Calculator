@@ -82,6 +82,10 @@ Makefile: ../Calculator/Calculator.pro C:/Qt/6.2.3/mingw_64/mkspecs/win32-g++/qm
 		C:/Qt/6.2.3/mingw_64/mkspecs/qconfig.pri \
 		C:/Qt/6.2.3/mingw_64/mkspecs/modules/qt_ext_freetype.pri \
 		C:/Qt/6.2.3/mingw_64/mkspecs/modules/qt_ext_libpng.pri \
+		C:/Qt/6.2.3/mingw_64/mkspecs/modules/qt_lib_charts.pri \
+		C:/Qt/6.2.3/mingw_64/mkspecs/modules/qt_lib_charts_private.pri \
+		C:/Qt/6.2.3/mingw_64/mkspecs/modules/qt_lib_chartsqml.pri \
+		C:/Qt/6.2.3/mingw_64/mkspecs/modules/qt_lib_chartsqml_private.pri \
 		C:/Qt/6.2.3/mingw_64/mkspecs/modules/qt_lib_concurrent.pri \
 		C:/Qt/6.2.3/mingw_64/mkspecs/modules/qt_lib_concurrent_private.pri \
 		C:/Qt/6.2.3/mingw_64/mkspecs/modules/qt_lib_core.pri \
@@ -182,6 +186,7 @@ Makefile: ../Calculator/Calculator.pro C:/Qt/6.2.3/mingw_64/mkspecs/win32-g++/qm
 		C:/Qt/6.2.3/mingw_64/mkspecs/features/qt_config.prf \
 		C:/Qt/6.2.3/mingw_64/mkspecs/win32-g++/qmake.conf \
 		C:/Qt/6.2.3/mingw_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		C:/Qt/6.2.3/mingw_64/mkspecs/features/exclusive_builds.prf \
 		C:/Qt/6.2.3/mingw_64/mkspecs/features/toolchain.prf \
 		C:/Qt/6.2.3/mingw_64/mkspecs/features/default_pre.prf \
@@ -211,7 +216,6 @@ Makefile: ../Calculator/Calculator.pro C:/Qt/6.2.3/mingw_64/mkspecs/win32-g++/qm
 		C:/Qt/6.2.3/mingw_64/lib/Qt6Gui.prl \
 		C:/Qt/6.2.3/mingw_64/lib/Qt6Core.prl \
 		C:/Qt/6.2.3/mingw_64/lib/Qt6EntryPoint.prl \
-		.qmake.stash \
 		C:/Qt/6.2.3/mingw_64/mkspecs/features/build_pass.prf
 	$(QMAKE) -o Makefile ..\Calculator\Calculator.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 C:/Qt/6.2.3/mingw_64/mkspecs/features/spec_pre.prf:
@@ -226,6 +230,10 @@ C:/Qt/6.2.3/mingw_64/mkspecs/common/windows-desktop.conf:
 C:/Qt/6.2.3/mingw_64/mkspecs/qconfig.pri:
 C:/Qt/6.2.3/mingw_64/mkspecs/modules/qt_ext_freetype.pri:
 C:/Qt/6.2.3/mingw_64/mkspecs/modules/qt_ext_libpng.pri:
+C:/Qt/6.2.3/mingw_64/mkspecs/modules/qt_lib_charts.pri:
+C:/Qt/6.2.3/mingw_64/mkspecs/modules/qt_lib_charts_private.pri:
+C:/Qt/6.2.3/mingw_64/mkspecs/modules/qt_lib_chartsqml.pri:
+C:/Qt/6.2.3/mingw_64/mkspecs/modules/qt_lib_chartsqml_private.pri:
 C:/Qt/6.2.3/mingw_64/mkspecs/modules/qt_lib_concurrent.pri:
 C:/Qt/6.2.3/mingw_64/mkspecs/modules/qt_lib_concurrent_private.pri:
 C:/Qt/6.2.3/mingw_64/mkspecs/modules/qt_lib_core.pri:
@@ -326,6 +334,7 @@ C:/Qt/6.2.3/mingw_64/mkspecs/features/qt_functions.prf:
 C:/Qt/6.2.3/mingw_64/mkspecs/features/qt_config.prf:
 C:/Qt/6.2.3/mingw_64/mkspecs/win32-g++/qmake.conf:
 C:/Qt/6.2.3/mingw_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 C:/Qt/6.2.3/mingw_64/mkspecs/features/exclusive_builds.prf:
 C:/Qt/6.2.3/mingw_64/mkspecs/features/toolchain.prf:
 C:/Qt/6.2.3/mingw_64/mkspecs/features/default_pre.prf:
@@ -355,7 +364,6 @@ C:/Qt/6.2.3/mingw_64/lib/Qt6Widgets.prl:
 C:/Qt/6.2.3/mingw_64/lib/Qt6Gui.prl:
 C:/Qt/6.2.3/mingw_64/lib/Qt6Core.prl:
 C:/Qt/6.2.3/mingw_64/lib/Qt6EntryPoint.prl:
-.qmake.stash:
 C:/Qt/6.2.3/mingw_64/mkspecs/features/build_pass.prf:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\Calculator\Calculator.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
